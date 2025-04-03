@@ -2,6 +2,17 @@ Image translation training and inference.
 learning a mapping to transform src images into dst images, using UNet as a more direct, suitable, and less complex approach
 
 
+
+
+Features Support:
+```
+Multi-GPU training native
+Up to 8K native plates
+Multi-node for scale compute Ie: 8+ GPUs 
+Control of overlap
+```
+
+
 Inference:
 
 Loads Trained Checkpoint: Reads the saved .pth file.
