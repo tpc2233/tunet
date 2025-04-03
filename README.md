@@ -1,4 +1,8 @@
-Infernece:
+Image translation training and inference.
+learning a mapping to transform src images into dst images, using UNet as a more direct, suitable, and less complex approach
+
+
+Inference:
 
 Loads Trained Checkpoint: Reads the saved .pth file.
 Reads Training Config: Automatically determines the resolution used during training from the checkpoint's saved arguments.
