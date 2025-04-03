@@ -39,10 +39,12 @@ Training Previews: Generates and saves a preview image (training_preview.jpg) at
 Configurable Hyperparameters: Uses command-line arguments (argparse) to allow easy configuration of crucial parameters like learning rate (--lr), batch size per GPU (--batch_size), number of epochs (--epochs), data paths, overlap, etc.
 
 
+
 Preview of the training:
-MakeRain dataset
-grid 3x3
+```
 left: Src Original
 Middle: Dst GT
 Right: Test Inference 
+```
+
 <img width="1554" alt="Screenshot 2025-04-03 at 10 15 42" src="https://github.com/user-attachments/assets/7b188b50-8414-48e5-8710-0ddb699a69e3" />
