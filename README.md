@@ -34,10 +34,12 @@ pip install onnx onnxruntime Pillow
 TRAINING:
 cd to tunet folder
 make sure conda activate tunet
-torchrun --standalone --nnodes=1 --nproc_per_node=7 train.py --src_dir /path/to/your/src --dst_dir /path/to/your/dst --output_dir /path/to/your/model --resolution 512 --overlap_factor 0.25 --log_interval 5 --save_interval 10 --epochs 5000 --batch_size 4
+torchrun --standalone --nnodes=1 --nproc_per_node=8 train.py --src_dir /path/to/your/src --dst_dir /path/to/your/dst --output_dir /path/to/your/model --resolution 512 --overlap_factor 0.25 --log_interval 5 --save_interval 10 --epochs 5000 --batch_size 4
 
-Optional:
---unet_hidden_size 128 (for model size, default=64)
+
+For model size use: --unet_hidden_size 128 (default=64)
+--nproc_per_node=8 (use 8 GPUs)
+--nnodes=1 (use one machine)
 ```
 
 
