@@ -1,5 +1,13 @@
-Image translation training and inference.
-learning a mapping to transform src images into dst images, using UNet as a more direct, suitable, and less complex approach
+<div align="center">
+
+# TUNET
+Learn a pixel-wise mapping from source (src) images to destination (dst) images using U-Net — a more direct, suitable, and less complex approach. 
+Supports both training and inference.
+
+
+</div>
+
+
 
 
 
@@ -40,7 +48,7 @@ Configurable Hyperparameters: Uses command-line arguments (argparse) to allow ea
 
 
 
-Preview of the training:
+## Preview of the training:
 ```
 left: Src Original
 Middle: Dst GT
@@ -48,3 +56,16 @@ Right: Test Inference
 ```
 
 <img width="1554" alt="Screenshot 2025-04-03 at 10 15 42" src="https://github.com/user-attachments/assets/7b188b50-8414-48e5-8710-0ddb699a69e3" />
+
+## Video:
+[[video 🤗](https://youtu.be/UyMq0bsny-A)]
+
+## License
+
+The source code is licensed under the Apache License, Version 2.0.
+Permissions
+Commercial use
+Modification
+Distribution
+Patent use
+Private use
