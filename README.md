@@ -20,6 +20,9 @@ Control of overlap
 
 ✅ Install using Miniconda or Anaconda:
 ```
+git clone https://github.com/tpc2233/tunet.git
+cd tunet
+
 conda create -n tunet python=3.8
 conda activate tunet
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
