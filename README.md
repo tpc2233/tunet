@@ -10,15 +10,35 @@ Supports both training and inference.
 
 
 
-
-
-Features Support:
+Features:
 ```
 Multi-GPU training native
 Up to 8K native plates
 Multi-node for scale compute Ie: 8+ GPUs 
 Control of overlap
 ```
+
+✅ Install using Miniconda or Anaconda:
+```
+conda create -n tunet python=3.8
+conda activate tunet
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install onnx onnxruntime Pillow
+```
+
+
+## Preview of the training:
+```
+left: Src Original
+Middle: Dst GT
+Right: Test Inference 
+```
+
+<img width="1554" alt="Screenshot 2025-04-03 at 10 15 42" src="https://github.com/user-attachments/assets/7b188b50-8414-48e5-8710-0ddb699a69e3" />
+
+## Video:
+[[video 🤗](https://youtu.be/UyMq0bsny-A)]
+
 
 
 Inference:
@@ -48,17 +68,6 @@ Configurable Hyperparameters: Uses command-line arguments (argparse) to allow ea
 
 
 
-## Preview of the training:
-```
-left: Src Original
-Middle: Dst GT
-Right: Test Inference 
-```
-
-<img width="1554" alt="Screenshot 2025-04-03 at 10 15 42" src="https://github.com/user-attachments/assets/7b188b50-8414-48e5-8710-0ddb699a69e3" />
-
-## Video:
-[[video 🤗](https://youtu.be/UyMq0bsny-A)]
 
 ## License
 
