@@ -49,7 +49,8 @@ Right: Test Inference
 WIP TODO
 python utils/convert_flame.py --checkpoint /path/to/your/002/model/tunet_latest.pth --use_gpu
 ```
-<img width="893" alt="Screenshot 2025-04-06 at 19 28 20" src="https://github.com/user-attachments/assets/95c314f2-1ad5-4f15-ab25-e8eebc892c5b" />
+<img width="893" alt="Screenshot 2025-04-06 at 19 28 21" src="https://github.com/user-attachments/assets/0eec9a04-eb3b-4e1a-94bb-b23f9d441690" />
+
 
 
 ✅ Foundry NUKE CAT Converter:
