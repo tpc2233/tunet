@@ -26,15 +26,15 @@ pip install onnx pyyaml lpips onnxruntime Pillow
 ✅ How to use:
 ```
 TRAINING:
-soon
+torchrun --standalone --nnodes=1 --nproc_per_node=1 train_yaml.py --config /path/to/your/config.yaml
 ```
 
 
 ## Preview of the training:
 ```
-left: Src Original
-Middle: Dst GT
-Right: Test Inference 
+left: Src Original plate
+Middle: Dst Modified plate
+Right: Model Inference 
 ```
 
 <img width="1554" alt="Screenshot 2025-04-03 at 10 15 42" src="https://github.com/user-attachments/assets/7b188b50-8414-48e5-8710-0ddb699a69e3" />
