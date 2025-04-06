@@ -1,7 +1,7 @@
 <div align="center">
 
 # TUNET
-Learn a pixel-wise mapping from source (src) images to destination (dst) images using U-Net — a more direct, suitable, and less complex approach. 
+A pixel-wise mapping from source (src) images to destination (dst) images using U-Net — a more direct, suitable, and less complex approach. 
 Supports both training and inference.
 
 
@@ -10,13 +10,7 @@ Supports both training and inference.
 
 
 
-Features:
-```
-Multi-GPU training native
-Up to 8K native plates
-Multi-node for scale compute Ie: 8+ GPUs 
-Control of overlap
-```
+
 
 ✅ Install using Miniconda or Anaconda:
 ```
