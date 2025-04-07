@@ -26,6 +26,8 @@ pip install onnx pyyaml lpips onnxruntime Pillow
 ✅ How to use:
 ```
 TRAINING:
+Copy one of the config_templates to your project [simple or advanced]
+input your plates and configuration
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
 ```
 
