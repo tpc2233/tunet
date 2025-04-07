@@ -1,0 +1,41 @@
+# tunet_base.yaml
+
+# --- Data Settings ---
+data:
+  src_dir: MUST BE PROVIDED BY USER
+  dst_dir: MUST BE PROVIDED BY USER
+  output_dir: MUST BE PROVIDED BY USER
+  resolution: 512                     # 512 or 1024
+  overlap_factor: 0.25                # default 0.25, range 0.0 to 1.0
+
+
+# --- Model Settings ---
+model:
+  model_size_dims: 64                # hidden_unet_size, default 64 or 128 or 256 or 512
+
+
+
+###############################################
+#### only change the below if really need #####
+###############################################
+
+
+# --- Training Settings ---
+training:
+  iterations_per_epoch: 500          # Number of batches ints per save cycle
+  batch_size: 2                      # Batch size *per GPU*
+  lr: !!float 1e-4                   # Learning rate (1e-4 to 5e-5)
+  loss: l1                           #loss
+  lambda_lpips: 1.0                  #loss_lambda
+  use_amp: false                     # false or True. To enable fp16 Mixed-precision training
+  num_workers: 4                     # Dataloader workers per GPU
+  prefetch_factor: 2                 # Dataloader prefetch factor
+
+# --- Logging & Saving Settings ---
+logging:
+  log_interval: 5                   # Log training status every N batches
+  preview_batch_interval: 35        # Save preview image every N batches (0=disable)
+  preview_refresh_rate: 5           # Refresh preview images every N preview saves (0=disable)
+
+saving:
+  keep_last_checkpoints: 4           # Number of checkpoints to keep (excluding latest)

@@ -1,0 +1,22 @@
+# tunet_template_user
+
+# --- Data Settings ---
+data:
+  src_dir: /path/to/data/src   # Update this path for Original plates
+  dst_dir: /path/to/data/dst   # Update this path for Modified plates
+  output_dir: /path/to/data/model # For saving checkpoints, logs, previews
+  resolution: 512                     # 512 or 1024
+
+
+
+
+# --- Model size ---
+model:
+  model_size_dims: 64                # Model size, default=64 or 128 or 256 or 512
+
+
+
+
+# --- Training Settings ---
+training:
+  batch_size: 2                      # Batch size *per GPU*

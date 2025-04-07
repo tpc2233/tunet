@@ -1,0 +1,34 @@
+# tunet_template_advanced_user
+
+# --- Data Settings ---
+data:
+  src_dir: /path/to/data/src   # Update this path for Original plates
+  dst_dir: /path/to/data/dst   # Update this path for Modified plates
+  output_dir: /path/to/data/model # For saving checkpoints, logs, previews
+  resolution: 512                     # 512 or 1024
+
+
+
+
+# --- Model Settings ---
+model:
+  model_size_dims: 128                # Model size, default 64 or 128 or 256 or 512
+
+
+
+
+
+# --- Training Settings ---
+training:
+  iterations_per_epoch: 500          # Number of ints per save cycle
+  batch_size: 4                      # Batch size *per GPU*
+  use_amp: True                      # false or True. To enable fp16 Mixed-precision training
+
+# --- Logging & Saving Settings ---
+logging:
+  log_interval: 5                   # Log training status every N batches
+  preview_batch_interval: 35        # Save preview image every N batches (0=disable)
+  preview_refresh_rate: 5           # Refresh preview images every N preview saves (0=disable)
+
+saving:
+  keep_last_checkpoints: 4           # Number of checkpoints to keep (excluding latest)
