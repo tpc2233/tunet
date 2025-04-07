@@ -20,7 +20,7 @@ cd tunet
 conda create -n tunet python=3.8
 conda activate tunet
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install onnx pyyaml lpips onnxruntime Pillow
+pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ```
 
 ✅ How to use:
