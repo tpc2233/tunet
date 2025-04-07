@@ -32,3 +32,18 @@ logging:
 
 saving:
   keep_last_checkpoints: 4           # Number of checkpoints to keep (excluding latest)
+
+
+# --- datacontrol ---
+dataloader:
+  datasets:
+    shared_augs: 
+# Augmentations applied identically to source and destination
+      - _target_: albumentations.HorizontalFlip
+        p: 0.5    # Apply %%% of the time 0.6 = 60%
+   
+      - _target_: albumentations.Affine
+        p: 0.4   # Apply %%% of the time 0.6 = 60%
+               
+      - _target_: albumentations.RandomGamma 
+        p: 0.8    # Apply %%% of the time 0.6 = 60% 
