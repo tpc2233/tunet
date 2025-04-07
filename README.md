@@ -28,6 +28,7 @@ pip install onnx pyyaml lpips onnxruntime Pillow
 TRAINING:
 Copy one of the config_templates to your project [simple or advanced]
 input your plates and configuration
+Run:
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
 ```
 
@@ -66,9 +67,5 @@ python utils/convert_nuke.py --checkpoint_pth /path/to/your/002/model//test_simp
 ## License
 
 The source code is licensed under the Apache License, Version 2.0.
-Permissions
-Commercial use
-Modification
-Distribution
-Patent use
-Private use
+Commercial use Permission 
+
