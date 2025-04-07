@@ -33,7 +33,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/y
 ```
 
 
-## Preview of the training:
+## Training screen:
 ```
 left: Src Original plate
 Middle: Dst Modified plate
@@ -42,8 +42,15 @@ Right: Model Inference
 
 <img width="1554" alt="Screenshot 2025-04-03 at 10 15 42" src="https://github.com/user-attachments/assets/7b188b50-8414-48e5-8710-0ddb699a69e3" />
 
+## Inference:
+```
+soon
+```
+
+### Inference converters:
 
 ✅ Foundry NUKE CAT Converter:
+You can convert the model to run directly inside Nuke:
 ```
 python utils/convert_nuke.py --generate_nk --checkpoint_pth /path/to/model/tunet_latest.pth --method script
 ```
@@ -52,6 +59,7 @@ python utils/convert_nuke.py --generate_nk --checkpoint_pth /path/to/model/tunet
 
 
 ✅ Autodesk FLAME ONNX Converter:
+You can convert the model to run directly inside Flame:
 ```
 WIP TODO
 python utils/convert_flame.py --checkpoint /path/to/model/tunet_latest.pth --use_gpu
@@ -63,6 +71,16 @@ python utils/convert_flame.py --checkpoint /path/to/model/tunet_latest.pth --use
 [[video 🤗](https://youtu.be/UyMq0bsny-A)]
 
 
+### Citation
+
+Consider giving this repository a star and cite TUNET in your project.
+```
+@article{tpo2025tunet,
+  title={TuNet},
+  author={Thiago Porto},
+  year={2025}
+}
+```
 
 ## License
 
