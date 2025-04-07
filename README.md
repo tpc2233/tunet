@@ -49,7 +49,7 @@ Right: Model Inference
 
 ## Inference:
 ```
-soon
+python inference.py --overlap_factor 0.25 --checkpoint /path/to/your/tunet_latest.pth --input_dir /path/to/your/plate --output_dir /path/to/output/folder
 ```
 
 ### Inference converters:
