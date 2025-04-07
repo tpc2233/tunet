@@ -51,19 +51,21 @@ soon
 
 ### Inference converters:
 
-✅ Foundry NUKE CAT Converter:
+✅ Foundry NUKE Converter:
 ```
-Convert the model to run native inside Nuke:
+Convert the model to run native inside Nuke, CAT:
+
 python utils/convert_nuke.py --generate_nk --checkpoint_pth /path/to/model/tunet_latest.pth --method script
 ```
 <img width="899" alt="Screenshot 2025-04-06 at 19 31 15" src="https://github.com/user-attachments/assets/e8b4c620-93a3-4f50-8789-09f88326c2b6" />
 
 
 
-✅ Autodesk FLAME ONNX Converter:
+✅ Autodesk FLAME Converter:
 ```
 WIP TODO
-Convert the model to run native inside Flame:
+Convert the model to run native inside Flame, ONNX:
+
 python utils/convert_flame.py --checkpoint /path/to/model/tunet_latest.pth --use_gpu
 ```
 <img width="893" alt="Screenshot 2025-04-06 at 19 28 21" src="https://github.com/user-attachments/assets/0eec9a04-eb3b-4e1a-94bb-b23f9d441690" />
