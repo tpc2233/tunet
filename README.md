@@ -13,6 +13,8 @@ Supports both training and inference.
 
 
 ✅ Install using Miniconda or Anaconda:
+[[Install Video]([https://youtu.be/UyMq0bsny-A](https://youtu.be/QaAca_LiwKc))]
+
 ```
 git clone https://github.com/tpc2233/tunet.git
 cd tunet
