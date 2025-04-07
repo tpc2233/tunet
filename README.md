@@ -26,7 +26,7 @@ pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ```
 
 ✅ How to use: 
-###[[Install Video](https://youtu.be/gRwQRJPaX7U)] 
+###[[Training Video](https://youtu.be/gRwQRJPaX7U)] 
 ```
 TRAINING:
 Choose one of the config_templates to your project [simple or advanced]
