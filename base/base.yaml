@@ -18,8 +18,58 @@ model:
 ###############################################
 #### only change the below if really need #####
 ###############################################
+# --- dataloader ---
+dataloader:
+  datasets:
+    src_augs: [] 
+      # - _target_: albumentations.SomeSrcOnlyAug
+      #   p: 0.5
 
+    dst_augs: [] 
+      # - _target_: albumentations.SomeDstOnlyAug
+      #   p: 0.5
 
+    shared_augs: # Augmentations applied identically to source and destination
+      - _target_: albumentations.HorizontalFlip
+        p: 0.0
+      - _target_: albumentations.VerticalFlip # Example
+        p: 0.0
+## WIP TODO ThinPlateSpline version missmatch
+#      - _target_: albumentations.ThinPlateSpline
+#        p: 1.0            # Apply %% of the time
+#        scale_range: [0.02, 0.06]       # <-- KEY: Controls intensity/scale (try 0.1 to 0.6+)
+#        num_control_points: 4
+#        interpolation: 1  # cv2.INTER_LINEAR (usually good enough)
+#        border_mode: 4    # cv2.BORDER_REPLICATE        
+        
+      - _target_: albumentations.GridDistortion
+        p: 0.0            # Apply %%% of the time
+        num_steps: 5      # <-- KEY: Fewer steps = larger waves (try 4, 5, 6)
+        distort_limit: [-0.6, 0.6]  # <-- Controls intensity (try 0.2 to 0.5)
+        interpolation: 1  # cv2.INTER_LINEAR
+        border_mode: 4    # cv2.BORDER_REPLICATE 
+## WIP TODO ElasticTransform too noise without mask        
+#      - _target_: albumentations.ElasticTransform
+#        p: 0.2  # Apply % of the time
+#        alpha: 100
+#        sigma: 100
+#        interpolation: 1 # cv2.INTER_LINEAR
+#        border_mode: 4   # cv2.BORDER_REPLICATE         
+      - _target_: albumentations.Affine
+        scale: [0.9, 1.1]           # Scale range
+        translate_percent: [-0.1, 0.1] # Translate range
+        rotate: [-3, 3]             # Rotation range in degrees
+        shear: [-1, 1]                # Shear range in degrees (optional)
+        interpolation: 2              # 2 = cv2.INTER_CUBIC
+        keep_ratio: true              # IMPORTANT for paired images if scaling
+        p: 0.0                       # Apply Affine %%% of the time
+        
+        
+      - _target_: albumentations.RandomGamma # Use the custom name we handle
+        gamma_limit: [40, 160] # Example: Albumentations limit
+        p: 0.0          # Apply Color Jitter % of the time        
+     
+        
 # --- Training Settings ---
 training:
   iterations_per_epoch: 500          # Number of batches ints per save cycle
