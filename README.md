@@ -13,7 +13,7 @@ Supports both training and inference.
 
 
 ✅ Install using Miniconda or Anaconda:
-[[Install Video](https://youtu.be/QaAca_LiwKc))]
+###[[Install Video](https://youtu.be/QaAca_LiwKc))]
 
 ```
 git clone https://github.com/tpc2233/tunet.git
@@ -25,7 +25,8 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ```
 
-✅ How to use:
+✅ How to use: 
+###[[Install Video](https://youtu.be/gRwQRJPaX7U)] 
 ```
 TRAINING:
 Choose one of the config_templates to your project [simple or advanced]
