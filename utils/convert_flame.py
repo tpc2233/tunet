@@ -19,7 +19,7 @@ def dict_to_namespace(d):
 
 # --- UNet Model Definition ---
 class DoubleConv(nn.Module):
-    # ... (Same as in your training/inference code) ...
+    # ... ...
     def __init__(self, in_channels, out_channels, mid_channels=None):
         super().__init__()
         if not mid_channels: mid_channels = out_channels
@@ -30,13 +30,13 @@ class DoubleConv(nn.Module):
     def forward(self, x): return self.d(x)
 
 class Down(nn.Module):
-    # ... (Same as in your training/inference code) ...
+    # ... ...
     def __init__(self, in_channels, out_channels):
         super().__init__(); self.m = nn.Sequential(nn.MaxPool2d(2), DoubleConv(in_channels, out_channels))
     def forward(self, x): return self.m(x)
 
 class Up(nn.Module):
-    # ... (Same as in your training/inference code) ...
+    # ... ...
     def __init__(self, in_channels, skip_channels, out_channels, bilinear=True):
         super().__init__(); self.bilinear = bilinear
         if bilinear: self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True); conv_in_channels = in_channels + skip_channels
@@ -48,7 +48,7 @@ class Up(nn.Module):
         x = torch.cat([x2, x1], dim=1); return self.conv(x)
 
 class OutConv(nn.Module):
-    # ... (Same as in your training/inference code) ...
+    # ... ...
     def __init__(self, in_channels, out_channels): super().__init__(); self.c = nn.Conv2d(in_channels, out_channels, 1)
     def forward(self, x): return self.c(x)
 
@@ -57,7 +57,7 @@ class UNet(nn.Module):
     def __init__(self, config, n_ch=3, n_cls=3, bilinear=True):
         super().__init__(); self.n_ch = n_ch; self.n_cls = n_cls;
         # Get model size from the passed config object using the new key
-        self.hidden_size = config.model.model_size_dims # <-- Use new key
+        self.hidden_size = config.model.model_size_dims # new key
         self.bilinear = bilinear
         h = self.hidden_size; chs = {'enc1': h, 'enc2': h*2, 'enc3': h*4, 'enc4': h*8, 'bottle': h*16}
         self.inc = DoubleConv(n_ch, chs['enc1']); self.down1 = Down(chs['enc1'], chs['enc2']); self.down2 = Down(chs['enc2'], chs['enc3']); self.down3 = Down(chs['enc3'], chs['enc4']); self.down4 = Down(chs['enc4'], chs['bottle'])
@@ -69,7 +69,7 @@ class UNet(nn.Module):
 
 
 # --- Normalization Wrapper ---
-# ... (remains the same) ...
+# ... (same) ...
 class NormalizedUNet(nn.Module):
     def __init__(self, unet_model):
         super().__init__()
@@ -85,7 +85,7 @@ class NormalizedUNet(nn.Module):
 
 # --- Modified load_model_for_export ---
 def load_model_for_export(checkpoint_path, device):
-    """Loads TuNet, wraps it for normalization, detecting model size.""" # Updated description
+    """Loads TuNet, wraps it for normalization, detecting model size.""" # description
     logging.info(f"Loading checkpoint from: {checkpoint_path}")
     # Load onto CPU first might be safer if checkpoint is large or from untrusted source
     # Set weights_only=False as we need the config/args object.
@@ -156,7 +156,7 @@ def load_model_for_export(checkpoint_path, device):
     return wrapped_model, resolution
 
 # --- JSON Generation Function ---
-# ... (remains the same) ...
+# ... (sa............me) ...
 def generate_flame_json(onnx_base_name, resolution, output_json_path, model_name=None, model_desc=""):
     if model_name is None: model_name = onnx_base_name
     input_name = "input_image"; output_name = "output_image"
