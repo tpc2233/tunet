@@ -75,7 +75,7 @@ python utils/convert_flame.py --checkpoint /path/to/model/tunet_latest.pth --use
 
 ### Citation
 
-Consider giving this repository a star and cite TUNET in your project.
+Consider cite TUNET in your project.
 ```
 @article{tpo2025tunet,
   title={TuNet},
