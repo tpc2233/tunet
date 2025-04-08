@@ -31,11 +31,13 @@ pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 TRAINING:
 Choose one of the config_templates to your project [simple or advanced]
 input your plates paths and configuration
-
+```
+```
 **SINGLE-GPU**
 Run trainer:
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
-
+```
+```
 **MULTI-GPU**
 Run trainer for 2 gpus:
 torchrun --standalone --nnodes=1 --nproc_per_node=2 train_multigpu.py --config /path/to/your/config.yaml
