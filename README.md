@@ -29,25 +29,30 @@ pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ###[[Training Video](https://youtu.be/gRwQRJPaX7U)] 
 ```
 TRAINING:
-Choose one of the config_templates to your project [simple or advanced]
-input your plates paths and configuration
+1- Choose one of the config_templates for your project (simple or advanced)
+2- Set the input plate paths 
+You are good to go!
 ```
 ```
 SINGLE-GPU:
-Run trainer:
+Run the trainer:
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
 ```
 ```
 MULTI-GPU:
-Run trainer for 2 gpus:
+Run the trainer
+For 2 GPUs:
 torchrun --standalone --nnodes=1 --nproc_per_node=2 train_multigpu.py --config /path/to/your/config.yaml
 
-Run trainer for 4 gpus:
+For 4 GPUs:
 torchrun --standalone --nnodes=1 --nproc_per_node=4 train_multigpu.py --config /path/to/your/config.yaml
 
-Run trainer for 8 gpus:
+For 8 GPUs:
 torchrun --standalone --nnodes=1 --nproc_per_node=8 train_multigpu.py --config /path/to/your/config.yaml
 
+Note:
+The batch_size is per GPU. 
+For example, if batch_size = 2 and you're using 8 GPUs, your effective global batch size will be 16.
 -- augs are disable for multi-gpu
 ```
 
