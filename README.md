@@ -34,7 +34,8 @@ TRAINING:
 You are good to go!
 ```
 
-SINGLE-GPU:␣␣ 
+SINGLE-GPU:  
+
 Run the trainer:
 ```
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
