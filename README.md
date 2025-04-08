@@ -33,12 +33,12 @@ Choose one of the config_templates to your project [simple or advanced]
 input your plates paths and configuration
 ```
 ```
-**SINGLE-GPU**
+SINGLE-GPU:
 Run trainer:
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
 ```
 ```
-**MULTI-GPU**
+MULTI-GPU:
 Run trainer for 2 gpus:
 torchrun --standalone --nnodes=1 --nproc_per_node=2 train_multigpu.py --config /path/to/your/config.yaml
 
@@ -46,7 +46,7 @@ Run trainer for 4 gpus:
 torchrun --standalone --nnodes=1 --nproc_per_node=4 train_multigpu.py --config /path/to/your/config.yaml
 
 Run trainer for 8 gpus:
-torchrun --standalone --nnodes=1 --nproc_per_node=4 train_multigpu.py --config /path/to/your/config.yaml
+torchrun --standalone --nnodes=1 --nproc_per_node=8 train_multigpu.py --config /path/to/your/config.yaml
 
 -- augs are disable for multi-gpu
 ```
