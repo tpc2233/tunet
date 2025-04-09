@@ -42,7 +42,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/y
 
 MULTI-GPU  
 ```
-check branches, WIP
+check branches
 ```
 
 
