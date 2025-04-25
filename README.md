@@ -1,8 +1,8 @@
 <div align="center">
 
 # TUNET
-A pixel-wise mapping from source (src) images to destination (dst) images using U-Net — a more direct, suitable, and less complex approach. 
-Supports both training and inference.
+A pixel-wise mapping from source (src) to destination (dst) images using an encoder-decoder architecture — a more direct, suitable, and less complex approach.   
+Supports, training, inference or export to Compositor tools such Foundry Nuke or Autodesk Flame native inference.
 
 
 </div>
