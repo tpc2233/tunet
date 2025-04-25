@@ -8,6 +8,9 @@ Supports, training, inference or export to Compositor tools such Foundry Nuke or
 </div>
 
 
+## 🎥 Watch In Action:
+
+[![Flame video](https://img.youtube.com/vi/6-OFAJtfliM/hqdefault.jpg)](https://youtu.be/6-OFAJtfliM)
 
 
 
