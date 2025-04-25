@@ -1,7 +1,7 @@
 <div align="center">
 
 # TUNET
-A pixel-wise mapping from source (src) to destination (dst) images using an encoder-decoder architecture — a more direct, suitable, and less complex approach.   
+A direct, pixel-level mapping from src to dst images via encoder-decoder.   
 Supports, training, inference or export to Compositor tools such Foundry Nuke or Autodesk Flame native inference.
 
 
