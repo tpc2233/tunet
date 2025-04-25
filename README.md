@@ -9,10 +9,10 @@ Supports, training, inference or export to Compositor tools such Foundry Nuke or
 
 
 ## 🎥 Watch In Action:
-
+Flame:
 [![Flame video](https://img.youtube.com/vi/6-OFAJtfliM/hqdefault.jpg)](https://youtu.be/6-OFAJtfliM)
 
-
+Nuke: (video soon)
 
 
 ✅ Install using Miniconda or Anaconda:
