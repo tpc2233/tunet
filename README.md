@@ -1,15 +1,18 @@
 <div align="center">
 
 # TUNET
-A pixel-wise mapping from source (src) images to destination (dst) images using U-Net — a more direct, suitable, and less complex approach. 
-Supports both training and inference.
+A direct, pixel-level mapping from src to dst images via encoder-decoder.   
+Supports, training, inference or export to Compositor tools such Foundry Nuke or Autodesk Flame native inference.
 
 
 </div>
 
 
+## 🎥 Watch In Action:
+Flame:   
+[![Flame video](https://img.youtube.com/vi/6-OFAJtfliM/hqdefault.jpg)](https://youtu.be/6-OFAJtfliM)
 
-
+Nuke: (video soon)
 
 
 ✅ Install using Miniconda or Anaconda:
