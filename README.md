@@ -14,19 +14,46 @@ Flame:
 
 Nuke: (video soon)
 
-
-✅ Install using Miniconda or Anaconda:
+## For Linux and Windows:   
+✅ Make sure Miniconda or Anaconda is installed:
 ###[[Install Video](https://youtu.be/QaAca_LiwKc))]
 
 ```
+# 1. Clone the repo
 git clone https://github.com/tpc2233/tunet.git
 cd tunet
 
+# 2. Create a Conda environment with Python 3.8 
 conda create -n tunet python=3.8
 conda activate tunet
+
+# 3. Install PyTorch
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# 4. Install the remaining dependencies
 pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ```
+
+## For macOS Apple Silicon:   
+✅ Make sure Miniconda or Anaconda is installed:
+
+```
+# 1. Clone the repo
+git clone https://github.com/tpc2233/tunet.git
+cd tunet
+
+# 2. Create a Conda environment with Python 3.8 (make sure Miniforge or Miniconda supports ARM64)
+conda create -n tunet python=3.8
+conda activate tunet
+
+# 3. Install PyTorch for macOS + M1/M2+ 
+pip install torch torchvision torchaudio
+
+# 4. Install the remaining dependencies
+pip install onnx pyyaml lpips onnxruntime Pillow albumentations
+
+```
+
 
 ✅ How to use: 
 ###[[Training Video](https://youtu.be/gRwQRJPaX7U)] 
@@ -36,11 +63,15 @@ TRAINING:
 2- Set the input plate paths 
 You are good to go!
 ```
-
+ 
 SINGLE-GPU  
 Run the trainer:
 ```
+# Linux
 torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
+
+# Windows or macOS
+python train.py --config /path/to/your/config.yaml
 ```
 
 MULTI-GPU  
@@ -73,7 +104,7 @@ python inference.py --overlap_factor 0.25 --checkpoint /path/to/your/tunet_lates
 ```
 Convert the model to run native inside Nuke, CAT:
 
-python utils/convert_nuke.py --generate_nk --checkpoint_pth /path/to/model/tunet_latest.pth --method script
+python utils/convert_nuke.py --method script --generate_nk --checkpoint_pth /path/to/model/tunet_latest.pth
 ```
 <img width="899" alt="Screenshot 2025-04-06 at 19 31 15" src="https://github.com/user-attachments/assets/e8b4c620-93a3-4f50-8789-09f88326c2b6" />
 
@@ -84,7 +115,7 @@ python utils/convert_nuke.py --generate_nk --checkpoint_pth /path/to/model/tunet
 WIP TODO
 Convert the model to run native inside Flame, ONNX:
 
-python utils/convert_flame.py --checkpoint /path/to/model/tunet_latest.pth --use_gpu
+python utils/convert_flame.py --use_gpu --checkpoint /path/to/model/tunet_latest.pth
 ```
 <img width="893" alt="Screenshot 2025-04-06 at 19 28 21" src="https://github.com/user-attachments/assets/0eec9a04-eb3b-4e1a-94bb-b23f9d441690" />
 
