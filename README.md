@@ -76,11 +76,13 @@ Right: Model Inference
 
 
 ## Inference:
+- * Important: Make sure you are using correct inference for your branch OS. Do not mix up 
 ```
 python inference.py --overlap_factor 0.25 --checkpoint /path/to/your/tunet_latest.pth --input_dir /path/to/your/plate --output_dir /path/to/output/folder
 ```
 
 ### Inference converters:
+- * Important: Make sure you are using correct converter for your branch OS. Do not mix up
 
 ✅ Foundry NUKE Converter:
 ```
