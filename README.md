@@ -14,7 +14,7 @@ Flame:
 
 Nuke: (video soon)
 
-## For Linux and Windows:   
+## For Windows and macOS:   
 ✅ Make sure Miniconda or Anaconda is installed:
 ###[[Install Video](https://youtu.be/QaAca_LiwKc))]
 
@@ -25,25 +25,15 @@ cd tunet
 conda create -n tunet python=3.8
 conda activate tunet
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudio 
 
 pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ```
 
-## For macOS Apple Silicon ARM64:   
-✅ Make sure Miniconda or Anaconda is installed:
+## For Linux and Multi-GPU use the dedicated Branch:   
 
 ```
-git clone https://github.com/tpc2233/tunet.git
-cd tunet
-
-conda create -n tunet python=3.8
-conda activate tunet
-
-pip install torch torchvision torchaudio
-
-pip install onnx pyyaml lpips onnxruntime Pillow albumentations
-
+check branches
 ```
 
 
@@ -59,22 +49,17 @@ You are good to go!
 SINGLE-GPU  
 Run the trainer:  
    
-
-- Linux
-```
-torchrun --standalone --nnodes=1 --nproc_per_node=1 train.py --config /path/to/your/config.yaml
-```   
-   
-
 - Windows or macOS   
 ```
 python train.py --config /path/to/your/config.yaml
 ```  
 
-MULTI-GPU  
+
+- Linux
 ```
 check branches
-```
+```   
+   
 
 
 
