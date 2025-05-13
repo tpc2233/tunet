@@ -22,9 +22,9 @@ Nuke: (video soon)
 git clone --branch linux --single-branch https://github.com/tpc2233/tunet.git
 cd tunet
 
-conda create -n tunet python=3.8
+conda create -n tunet python=3.9
 conda activate tunet
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudio 
 pip install onnx pyyaml lpips onnxruntime Pillow albumentations
 ```
 
